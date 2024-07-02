@@ -7,6 +7,7 @@ class Question:
         self.black_cat = black_cat
         self.golden_retriever = golden_retriever
     
-    def display_question(self):
-        return print(self.prompt)
+    def ask_question(self):
+        answer = input(self.prompt + '\n')
+        return answer
     
