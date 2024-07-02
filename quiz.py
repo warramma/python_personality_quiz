@@ -18,7 +18,16 @@ quiz = {
 #create score variables
 a_score = 0
 b_score = 0
+def results(a_score, b_score):
+    if(a_score > b_score):
+        print('You are a black cat! 🐈‍⬛\nYou are introverted and deeply mysterious, but deeply affectionate around those you love! \nYou love to stay in and cuddle, read books, and have plenty of alone time!\nYou safeguard your energy dearly because it gets easily depleted!\nYou dislike suprises and loud noises and welcome routine!\nWelcome to the club!!')
+    elif(b_score > a_score):
+        print('You are a golden retriever!\nExtroverted and very friendly, you really get around!\nYou are always making new friends!\nYou are a great listener and get along with everyone!\nYou love spending time with loved ones and being active! 🐕')
+    else:
+        print('You are equal parts black cat 🐈‍⬛ and golden retriever 🐕!! Way to forge your own path :)')
+        print('You straddle the line between introversion and extroversion. Although you love people, you also love you time! \nYou are passionate about your hobbies and love making news friends and experiencing new things!')
 
+#------------------------------------QUIZ BELOW ⬇️
 #welcome user + disclaimer
 print('Welcome to Black Cat vs Golden Retriever personality test!\nDisclaimer: this test is just for run and is not necessarily an accurate depiction of who you actually are :)\nLet\'s get started!\n')
 
@@ -34,12 +43,6 @@ for question in quiz:
         print('invalid input...')
 
 print('calculating your results......\n...............................\n......................')
+results(a_score,b_score)
 
-#results
-if(a_score > b_score):
-    print('You are a black cat! 🐈‍⬛\nYou are introverted and deeply mysterious, but deeply affectionate around those you love! \nYou love to stay in and cuddle, read books, and have plenty of alone time!\nYou safeguard your energy dearly because it gets easily depleted!\nYou dislike suprises and loud noises and welcome routine!\nWelcome to the club!!')
-elif(b_score > a_score):
-    print('You are a golden retriever!\nExtroverted and very friendly, you really get around!\nYou are always making new friends!\nYou are a great listener and get along with everyone!\nYou love spending time with loved ones and being active! 🐕')
-else:
-    print('You are equal parts black cat 🐈‍⬛ and golden retriever 🐕!! Way to forge your own path :)')
-    print('You straddle the line between introversion and extroversion. Although you love people, you also love you time! \nYou are passionate about your hobbies and love making news friends and experiencing new things!')
+
