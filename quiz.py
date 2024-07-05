@@ -2,7 +2,7 @@
 
 from Question import Question
 
-#create array of questions
+
 questions = [
     'On an ideal weekend, would you prefer: \na) cozy day home 🏠 doing hobbies, chilling 💤, etc \nb) Fun day out with friends 🎉, time outside ☀️😎', 
     'In parties 🥳, are you usually: \na) Staying mostly in one spot 😵‍💫, talking mostly to close friends 🥰, might be having fun but also wanting to go home 🏡 \nb) Meeting as many people 🫂 as possible, making new friends, having a blast 🚀',
@@ -10,9 +10,7 @@ questions = [
     'Would you rather be: \na) the smartest 😎 \nb) the friendliest in the room 🥰 ',
     'favorite seasons? \na) spring 🌸 and winter ❄️ \nb) summer ☀️ and fall 🍁'
 ]
-#print(questions) (just testing hehe)
 
-#create question objects in dictionary
 quiz = {
     '1' : Question('#1 ' + questions[0], 'a', 'b'),
     '2' : Question('\n#2 '+questions[1], 'a', 'b'),
@@ -21,9 +19,10 @@ quiz = {
     '5' : Question('\n#2 '+questions[4], 'a', 'b'),
 }
 
-#create score variables
+
 a_score = 0
 b_score = 0
+
 def results(a_score, b_score):
     print('Your scores:\nBlack cat: ' + str(a_score) + '\nGolden Retriever: ' + str(b_score) + '\n--------------')
     if(a_score > b_score):
@@ -38,10 +37,8 @@ def results(a_score, b_score):
 #welcome user + disclaimer
 print('Welcome to Black Cat vs Golden Retriever personality test!\nDisclaimer: this test is just for run and is not necessarily an accurate depiction of who you actually are :)\nLet\'s get started!\n')
 
-#loop through questions and ask which you prefer, keeping score in the right variable
 for question in quiz:
     answer = str(quiz[question].ask_question())
-    #print('You answered ' + str(answer) + '! Woohoo!')
     if(answer.lower() == quiz[question].black_cat):
         a_score +=1
     elif(answer.lower() == quiz[question].golden_retriever):
